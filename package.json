@@ -25,10 +25,8 @@
   },
   "dependencies": {
     "@substrate/txwrapper-core": "^0.2.1",
-    "@substrate/txwrapper-registry": "^0.2.1",
     "@substrate/txwrapper-substrate": "^0.2.1",
-    "@substrate/txwrapper-polkadot": "^0.2.1",
-    "@substrate/txwrapper-orml": "^0.2.1"
+    "@substrate/txwrapper-polkadot": "^0.2.1"
   },
   "devDependencies": {
     "ts-node": "9.1.1",

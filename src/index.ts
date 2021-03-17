@@ -4,20 +4,6 @@ import {
   getSpecTypes,
   TypeRegistry,
 } from "@substrate/txwrapper-core";
-
-/**************************************************************************/
-/*  ****used when bifrost adopt orml-currencies and orml-tokens pallets****
-
-import { methods as ORMLMethods } from "@substrate/txwrapper-orml"; 
-
-// export methods of pallets included in the Acala / Mandala runtimes.
-export const methods = {
-   currencies: ORMLMethods.currencies,
-};
-
-export * from "./TokenSymbol";
-/************************************************************************/
-
 import { methods as substrateMethods } from "@substrate/txwrapper-substrate";
 
 // Export methods of pallets included in the Bifrost runtimes.
@@ -37,8 +23,7 @@ const KNOWN_CHAIN_PROPERTIES = {
   bifrost: {
     ss58Format: 6,
     tokenDecimals: 12,
-    tokenSymbol: "ASG",
-    // tokenSymbol: "BNC",
+    tokenSymbol: "BNC",
   },
 };
 

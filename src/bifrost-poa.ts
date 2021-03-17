@@ -56,9 +56,6 @@ async function main(): Promise<void> {
   // if desired.
   // TODO In this example we use the `transfer` method; feel free to pick a
   // different method that illustrates using your chain.
-
-  // used when we adopt orml-currencies module
-  // const unsigned = methods.currencies.transfer(
   const unsigned = methods.balances.transfer(
     {
       value: "90071992547409910",
@@ -93,12 +90,6 @@ async function main(): Promise<void> {
     `\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
       `  Amount: ${decodedUnsigned.method.args.value}`
   );
-  // used when we adopt orml-currencies module
-  // console.log(
-  // 	`\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
-  // 		`  Amount: ${decodedUnsigned.method.args.amount}\n` +
-  // 		`  CurrencyId ${JSON.stringify(decodedUnsigned.method.args.currencyId)}`
-  // );
 
   // Construct the signing payload from an unsigned transaction.
   const signingPayload = construct.signingPayload(unsigned, { registry });
@@ -113,12 +104,6 @@ async function main(): Promise<void> {
     `\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
       `  Amount: ${payloadInfo.method.args.value}`
   );
-  // used when we adopt orml-currencies module
-  // console.log(
-  // 	`\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
-  // 		`  Amount: ${payloadInfo.method.args.amount}\n` +
-  // 		`  CurrencyId ${JSON.stringify(payloadInfo.method.args.currencyId)}`
-  // );
 
   // Sign a payload. This operation should be performed on an offline device.
   const signature = signWith(alice, signingPayload, {

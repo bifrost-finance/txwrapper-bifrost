@@ -20,9 +20,7 @@ export function rpcToLocalNode(
   method: string,
   params: any[] = []
 ): Promise<any> {
-  // return fetch('http://localhost:9933', {  // local
-  return fetch("http://bifrost-rpc.testnet.liebi.com:9933", {
-    // remote
+  return fetch("http://localhost:9933", {
     body: JSON.stringify({
       id: 1,
       jsonrpc: "2.0",

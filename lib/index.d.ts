@@ -1,5 +1,4 @@
 import { GetRegistryOptsCore, TypeRegistry } from "@substrate/txwrapper-core";
-/**************************************************************************/
 import { methods as substrateMethods } from "@substrate/txwrapper-substrate";
 export declare const methods: {
     balances: typeof substrateMethods.balances;
