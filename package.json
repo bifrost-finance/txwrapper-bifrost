@@ -1,7 +1,7 @@
 {
   "name": "@bifrost-finance/txwrapper-bifrost",
-  "version": "0.1.0",
-  "author": "Herry Ho <herry.heyi@gmail.com>",
+  "version": "0.2.0",
+  "author": "@bifrost-finance",
   "description": "Helper functions for bifrost offline transaction generation.",
   "files": [
     "lib"
@@ -12,24 +12,27 @@
     "registry": "https://registry.npmjs.org"
   },
   "main": "lib/index.js",
-  "private": true,
   "repository": "https://github.com/bifrost-finance/txwrapper-bifrost.git",
   "bugs": "https://github.com/bifrost-finance/txwrapper-bifrost/issues",
   "homepage": "https://github.com/bifrost-finance/txwrapper-bifrost",
   "engine": {
-    "node": ">=12"
+    "node": ">=16"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "bifrost": "node lib/bifrost-poa"
+    "build": "tsc"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^0.2.1",
-    "@substrate/txwrapper-substrate": "^0.2.1",
-    "@substrate/txwrapper-polkadot": "^0.2.1"
+    "@substrate/txwrapper-core": "^3.1.7",
+    "@substrate/txwrapper-registry": "^3.1.7",
+    "@substrate/txwrapper-substrate": "^3.1.7"
   },
   "devDependencies": {
-    "ts-node": "9.1.1",
-    "typescript": "4.1.5"
+    "@polkadot/api": "^9.1.1",
+    "@polkadot/keyring": "^10.1.4",
+    "@polkadot/types": "^9.1.1",
+    "@polkadot/util-crypto": "^10.1.4",
+    "node-fetch": "^3.2.10",
+    "ts-node": "10.9.1",
+    "typescript": "4.7.4"
   }
 }
