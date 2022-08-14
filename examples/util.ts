@@ -33,7 +33,7 @@
       method: 'POST',
     })
       .then((response) => response.json())
-      .then(({ error, result }) => {
+      .then(({ error, result } : any) => {
         if (error) {
           throw new Error(
             `${error.code} ${error.message}: ${JSON.stringify(error.data)}`
